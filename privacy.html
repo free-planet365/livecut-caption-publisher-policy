@@ -1,0 +1,25 @@
+<!doctype html><html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Livecut Caption Publisher — プライバシーポリシー案</title><link rel="stylesheet" href="style.css"></head><body><main><nav><a href="index.html">アプリの説明</a><a href="privacy.html">プライバシーポリシー案</a><a href="terms.html">利用規約案</a></nav>
+<h1>Livecut Caption Publisher<br>プライバシーポリシー案</h1>
+<aside><b>審査準備中の草案・未施行</b><br>下記の削除・保管期間を守れる運用を確認した後に正式施行します。現行プログラムのキャッシュ自動削除は未実装です。この表示を外して公開するだけでは、監査に必要な対応が完了したことにはなりません。</aside>
+<p>対象：チャンネル運営者自身が使用する字幕・多言語メタデータ登録用デスクトップツール。録画・動画ダウンロード等の機能はこのAPIクライアントの対象に含めません。草案作成日：2026年10月13日。</p>
+<h2>1. 運営者と利用対象</h2>
+<p>運営者：ホロライブ速報【切り抜きch】の運営者。連絡先：<strong><a href="mailto:free.planets.master@gmail.com">free.planets.master@gmail.com</a></strong>。本ツールは、運営者が管理するYouTube動画の字幕と翻訳タイトル・説明を登録するための内部ツールです。一般向けアカウント登録や有料サービスの提供は行いません。</p>
+<h2>2. YouTube APIサービス</h2>
+<p>本ツールはYouTube APIサービスを使用します。Googleによるデータの処理については<a href="https://policies.google.com/privacy">Googleプライバシーポリシー</a>をご確認ください。利用にあたっては<a href="https://www.youtube.com/t/terms">YouTube利用規約</a>が適用されます。</p>
+<h2>3. 取り扱うデータと目的</h2>
+<p>対象動画の動画ID、タイトル、説明、言語別メタデータ、既存字幕のID・言語等を、字幕の重複登録の防止と翻訳メタデータの更新のために取得します。運営者が用意した日本語・翻訳字幕のYTTファイルをYouTubeへ送信します。</p>
+<p>Google OAuth 2.0による認可には <code>youtube.force-ssl</code> スコープを使用します。アクセストークン・更新トークンは認可されたAPI操作に使用し、ローカルの認証ファイルに保存します。Googleアカウントのログイン用パスワードを本ツールが取得・保存することはありません。</p>
+<h2>4. 外部送信</h2>
+<p>字幕と多言語タイトル・説明を、運営者の指示に従いGoogle／YouTubeへ送信します。翻訳を実行するときは、日本語字幕、前後文脈、翻訳対象のタイトル・説明、辞書候補の必要部分をOpenAI APIへ送信します。OAuthトークンやGoogleアカウントのパスワードを翻訳サービスへ送信することはありません。OpenAIによる処理については<a href="https://openai.com/policies/privacy-policy/">OpenAIプライバシーポリシー</a>と、利用中のAPIサービス条件をご確認ください。</p>
+<p>視聴者はYouTubeの字幕機能で公開字幕を利用します。本ツールには視聴者用アカウントはなく、視聴者の閲覧履歴を収集する機能はありません。広告を配信する機能や独自の広告Cookieを配置する機能もありません。</p>
+<h2>5. 保存と保護</h2>
+<p>ローカル環境には、字幕ファイル、翻訳キャッシュ、アップロード進捗、処理ログ、認証ファイルを保存します。認証ファイルは一般公開する資料やリポジトリへ含めず、運営者が管理する環境だけで取り扱います。認証ファイルが暗号化されて保存されるとの保証は行いません。</p>
+<p><strong>以下は公開前に運用を確定する保管方針です。</strong> YouTube APIから取得したデータは必要な範囲のみ保存し、保存後30暦日以内に更新または削除します。運営者自身が作成した元字幕・編集素材と、YouTube APIから取得したデータは区別して管理します。認証トークンは有効な同意に基づく利用に必要な期間のみ保管します。</p>
+<h2>6. 認可の取り消しと削除</h2>
+<p>Googleアカウントの<a href="https://security.google.com/settings/security/permissions">接続済みアプリの管理画面</a>から本ツールの認可を取り消せます。認可取り消しによってGoogle側へのアクセスは停止しますが、ローカルファイルが自動的に全削除されるわけではありません。</p>
+<p><strong>以下は公開前に運用を確定する削除方針です。</strong> 削除要求は上記連絡先で受け付け、関連する保存済みAPIデータを速やかに、遅くとも7暦日以内に削除します。認可の取り消しが確認された場合は速やかに、遅くとも30暦日以内に対応するAPIデータと認証ファイルを削除します。バックアップ中の対象データも確認します。現時点では運営者による手動対応を前提とし、自動削除機能が実装済みであるとは表示しません。</p>
+<p>ローカルデータの削除は、YouTube上の公開動画や字幕を削除する操作ではありません。公開済みの動画・字幕を削除する場合はYouTube Studio等で別途操作します。</p>
+<h2>7. 変更と問い合わせ</h2>
+<p>データの利用目的や外部送信先を変更する場合は本ポリシーを更新し、必要な同意を得てから変更後の利用を開始します。問い合わせや削除要求は運営者の公開用連絡先へご連絡ください。</p>
+
+<footer>Livecut Caption Publisher · 更新日 2026年10月13日 · <a href="mailto:free.planets.master@gmail.com">free.planets.master@gmail.com</a></footer></main></body></html>
